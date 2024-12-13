@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网络空间安全协会</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+  <style>
+    html {
+      scroll-behavior: smooth; /* 启用平滑滚动效果 */
+    }
+
+    html, body {
+      background-color: #ffffff !important; /* 强制背景为白色 */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 全局样式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      position: fixed; /* 头部固定 */
+      top: 0;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000; /* 确保头部始终在最前面 */
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .header-content img {
+      height: 40px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #007acc;
+    }
+
+    .main-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 200px;
+      background-color: #ffffff;
+      margin-top: 20px;
+      height: 100vh;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .content {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .content h1 {
+      font-size: 48px;
+      margin: 0 0 20px 0;
+      color: #007acc;
+      line-height: 1.5;
+    }
+
+    .content h1 span {
+      display: block;
+    }
+
+    .content p {
+      line-height: 2;
+      font-size: 20px;
+      font-family: "Comic Sans MS", "Arial", sans-serif;
+      font-weight: bold;
+    }
+
+    .logo {
+      max-width: 700px;
+    }
+
+    .logo img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* 获奖部分 */
+    .honor-section {
+      width: 100%;
+      height: auto;
+      background-color: #f0f4f8;
+      padding: 50px 200px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .honor-section h2 {
+      font-size: 36px;
+      color: #007acc;
+      margin-bottom: 20px;
+    }
+
+    .year-group h3 {
+      font-size: 32px;
+      color: #555;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .honor-list {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    .honor-list li {
+      font-size: 25px;
+      line-height: 1.8;
+      color: #333;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    /* 成员部分 */
+    .members-section {
+      width: 100%;
+      height: auto;
+      background-color: #ffffff;
+      padding: 50px 200px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .members-section h2 {
+      font-size: 36px;
+      color: #007acc;
+      margin-bottom: 20px;
+    }
+
+    .members-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .member-card {
+      text-align: center;
+      width: calc(25% - 20px);
+      box-sizing: border-box;
+    }
+
+    .member-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .member-card img:hover {
+      transform: scale(1.1);
+    }
+
+    .member-card strong {
+      display: block;
+      margin: 10px 0 5px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .member-card p {
+      font-size: 14px;
+      color: #666;
+      margin: 5px 0 0;
+    }
+
+    .footer-separator-container {
+      background-color: #ffffff;
+      width: 100%;
+    }
+
+    .footer-separator {
+      width: 90%;
+      height: 2px;
+      margin: 20px auto;
+      background: linear-gradient(to right, #ffffff, #007acc, #ffffff);
+    }
+
+    .footer {
+      width: 100%;
+      background-color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .wechat-container {
+      position: relative;
+    }
+
+    .wechat-icon {
+      width: 160px;
+      height: 40px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .wechat-icon:hover {
+      transform: scale(1.2);
+    }
+
+    .wechat-qrcode {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+
+    .wechat-container:hover .wechat-qrcode {
+      display: block;
+    }
+
+    .wechat-qrcode img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .footer-text {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .copyright {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <img src="./img/other/logo.png" alt="协会Logo">
+        <nav>
+          <a href="#honor">获奖</a>
+          <a href="#members">成员</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 主内容 -->
+    <div class="main-section">
+      <div class="content">
+        <h1>
+          <span>中国民航大学</span>
+          <span>网络空间安全协会</span>
+        </h1>
+        <p>{{ description }}</p>
+      </div>
+      <div class="logo">
+        <img src="./img/other/logo.png" alt="协会Logo">
+      </div>
+    </div>
+
+    <!-- 获奖 -->
+    <div class="honor-section" id="honor">
+      <h2>获奖</h2>
+      <div v-for="(honors, year) in groupedHonors" :key="year" class="year-group">
+        <h3>{{ year }}</h3>
+        <ul class="honor-list">
+          <li v-for="(honor, index) in honors" :key="index">{{ honor }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 成员 -->
+    <div class="members-section" id="members">
+      <h2>成员</h2>
+      <div v-for="(members, year) in groupedMembers" :key="year" class="year-group">
+        <h3>{{ year }}</h3>
+        <div class="members-grid">
+          <div v-for="member in members" :key="member.id" class="member-card">
+            <a :href="member.blog" target="_blank">
+              <img :src="member.avatar" alt="头像">
+            </a>
+            <strong>{{ member.name }}</strong>
+            <p>{{ member.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 分割线容器 -->
+    <div class="footer-separator-container">
+      <div class="footer-separator"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="wechat-container">
+          <img src="./img/other/wechat_logo.jpg" alt="微信公众号" class="wechat-icon">
+          <div class="wechat-qrcode">
+            <img src="./img/other/wechat_qr.jpg" alt="微信公众号二维码">
+          </div>
+        </div>
+        <p class="footer-text">关注我们的微信公众号获取更多资讯</p>
+        <p class="copyright">Copyright © 2023 网络空间安全协会. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          description: `欢迎来到网络空间安全协会！协会成立于2023年3月31日，是由安全科学与工程学院指导的校级社团。在这里，我们专注于网安技术的探索与实践，成立以来，
+                        我们的队伍迅速壮大，参加了无数令人激动的赛事，并获得了一系列奖项🏆，但是进步神速～✨如果你对网安技术、CTF比赛或是技术探索充满热情，
+                        想在找到自己的舞台，以及交流的平台，那就赶快加入我们吧！这里有一群志同道合的小伙伴，等你一起来“网”住未来的精彩～ 😎🎉`,
+          honors: [
+            { year: 2020, title: "xxx" },
+            { year: 2020, title: "xxx" },
+            { year: 2021, title: "xxx" },
+            { year: 2021, title: "xxx" },
+            { year: 2021, title: "xxx" },
+            { year: 2021, title: "xxx" },
+            { year: 2021, title: "xxx" }
+          ],
+          members: [
+            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://yosheep.github.io", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
+            { id: 2, name: "李四", avatar: "https://via.placeholder.com/150", blog: "https://example.com/blog2", description: "xxx", year: 2020 },
+            { id: 3, name: "王五", avatar: "https://via.placeholder.com/150", blog: "https://example.com/blog3", description: "xxx", year: 2021 },
+            { id: 4, name: "赵六", avatar: "https://via.placeholder.com/150", blog: "https://example.com/blog4", description: "xxx", year: 2021 }
+          ]
+        };
+      },
+      computed: {
+        groupedHonors() {
+          return this.honors.reduce((groups, honor) => {
+            if (!groups[honor.year]) groups[honor.year] = [];
+            groups[honor.year].push(honor.title);
+            return groups;
+          }, {});
+        },
+        groupedMembers() {
+          return this.members.reduce((groups, member) => {
+            if (!groups[member.year]) groups[member.year] = [];
+            groups[member.year].push(member);
+            return groups;
+          }, {});
+        }
+      }
+    });
+
+    app.mount("#app");
+  </script>
+  <!-- 当你看到这里，没错，这是个手搓出来的纯静态页面。 -->
+</body>
+</html>
