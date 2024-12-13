@@ -314,6 +314,67 @@
       font-size: 14px;
       color: #666;
     }
+
+    @media (max-width: 768px) {
+      .header-content {
+        margin: 0 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .main-section {
+        flex-direction: column;
+        padding: 10px 20px;
+        height: auto;
+      }
+
+      .content h1 {
+        font-size: 32px;
+      }
+
+      .team-logo img {
+        width: 200px;
+        margin: 0 auto;
+      }
+
+      .team-description {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      .members-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .member-card {
+        width: calc(50% - 10px);
+      }
+
+      .honor-section,
+      .members-section {
+        padding: 30px 10px;
+      }
+
+      .team-intro-section {
+        padding: 20px 10px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .team-description p,
+      .honor-list li {
+        word-wrap: break-word;
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
