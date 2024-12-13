@@ -106,7 +106,7 @@
       border-radius: 8px;
     }
 
-    /* 获奖部分 */
+    /* 获奖经历部分 */
     .honor-section {
       width: 100%;
       height: auto;
@@ -145,7 +145,7 @@
       max-width: 800px;
     }
 
-    /* 成员部分 */
+    /* 活跃成员部分 */
     .members-section {
       width: 100%;
       height: auto;
@@ -281,10 +281,10 @@
     <!-- Header -->
     <header>
       <div class="header-content">
-        <img src="./img/other/logo.png" alt="协会Logo">
+        <img src="img/other/logo.png" alt="协会Logo">
         <nav>
-          <a href="#honor">获奖</a>
-          <a href="#members">成员</a>
+          <a href="#honor">获奖经历</a>
+          <a href="#members">活跃成员</a>
         </nav>
       </div>
     </header>
@@ -299,13 +299,13 @@
         <p>{{ description }}</p>
       </div>
       <div class="logo">
-        <img src="./img/other/logo.png" alt="协会Logo">
+        <img src="img/other/logo.png" alt="协会Logo">
       </div>
     </div>
 
-    <!-- 获奖 -->
+    <!-- 获奖经历 -->
     <div class="honor-section" id="honor">
-      <h2>获奖</h2>
+      <h2>获奖经历</h2>
       <div v-for="(honors, year) in groupedHonors" :key="year" class="year-group">
         <h3>{{ year }}</h3>
         <ul class="honor-list">
@@ -314,9 +314,9 @@
       </div>
     </div>
 
-    <!-- 成员 -->
+    <!-- 活跃成员 -->
     <div class="members-section" id="members">
-      <h2>成员</h2>
+      <h2>活跃成员</h2>
       <div v-for="(members, year) in groupedMembers" :key="year" class="year-group">
         <h3>{{ year }}</h3>
         <div class="members-grid">
@@ -340,13 +340,13 @@
     <footer class="footer">
       <div class="footer-content">
         <div class="wechat-container">
-          <img src="./img/other/wechat_logo.jpg" alt="微信公众号" class="wechat-icon">
+          <img src="img/other/wechat_logo.jpg" alt="微信公众号" class="wechat-icon">
           <div class="wechat-qrcode">
-            <img src="./img/other/wechat_qr.jpg" alt="微信公众号二维码">
+            <img src="img/other/wechat_qr.jpg" alt="微信公众号二维码">
           </div>
         </div>
         <p class="footer-text">关注我们的微信公众号获取更多资讯</p>
-        <p class="copyright">Copyright © 2023 网络空间安全协会. All Rights Reserved.</p>
+        <p class="copyright">Copyright © 2023 中航大网络空间安全协会. All Rights Reserved.</p>
       </div>
     </footer>
   </div>
@@ -368,12 +368,12 @@
             { year: 2021, title: "xxx" }
           ],
           members: [
-            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://yosheep.github.io", description: "xxx", year: 2020 },
-            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
-            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
-            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
-            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
-            { id: 1, name: "张三", avatar: "./img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "img/avatar/yosheep.jpeg", blog: "https://yosheep.github.io", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
+            { id: 1, name: "张三", avatar: "img/avatar/yosheep.jpeg", blog: "https://example.com/blog1", description: "xxx", year: 2020 },
             { id: 2, name: "李四", avatar: "https://via.placeholder.com/150", blog: "https://example.com/blog2", description: "xxx", year: 2020 },
             { id: 3, name: "王五", avatar: "https://via.placeholder.com/150", blog: "https://example.com/blog3", description: "xxx", year: 2021 },
             { id: 4, name: "赵六", avatar: "https://via.placeholder.com/150", blog: "https://example.com/blog4", description: "xxx", year: 2021 }
