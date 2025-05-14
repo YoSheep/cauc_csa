@@ -35,7 +35,7 @@ window.membersData = [
   { id: 5, name: "KUI", avatar: "img/avatar/kui.jpg", blog: "", description: "泪水打湿猪脚饭，发誓要挣一百万", year: 2023 },
   { id: 7, name: "La0D3ng", avatar: "img/avatar/laodeng.jpg", blog: "", description: "我是钟离的狗", year: 2023 },
   { id: 7, name: "dimotlo", avatar: "img/avatar/dimotlo.jpg", blog: "", description: "三人行必有我师焉", year: 2023 },
-  { id: 7, name: "0wnerD1ed", avatar: "img/avatar/0wnerD1ed.jpg", blog: "", description: "nubnub", year: 2023 },
+  { id: 7, name: "0wnerD1ed", avatar: "img/avatar/0wnerD1ed.jpg", blog: "https://github.com/0wnerDied", description: "nubnub", year: 2023 },
   { id: 7, name: "alexsun", avatar: "img/avatar/alexsun.jpg", blog: "https://alexyun.site", description: "一个不给自己论坛上证书的蠢蛋", year: 2023 },
   { id: 7, name: "Dawn_ARC", avatar: "img/avatar/Dawn_ARC.jpg", blog: "", description: "我打CTF？真的假的？", year: 2023 },
   { id: 7, name: "N0rth_5ea", avatar: "img/avatar/InWhere.jpg", blog: "https://www.bing.com", description: "一片空白下是乱七八糟", year: 2023 },
