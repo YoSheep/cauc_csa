@@ -1,0 +1,378 @@
+html {
+  scroll-behavior: smooth; /* 启用平滑滚动效果 */
+}
+
+html, body {
+  background-color: #ffffff !important; /* 强制背景为白色 */
+  margin: 0;
+  padding: 0;
+}
+
+/* 全局样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  position: fixed; /* 头部固定 */
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* 确保头部始终在最前面 */
+}
+
+.header-content {
+  max-width: 2500px;
+  margin: 0 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header-content img {
+  height: 40px;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none; /* 去掉下划线 */
+  color: #007acc; /* 设置默认文字颜色 */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 15px; /* 增加内边距，形成按钮效果 */
+  border-radius: 8px; /* 设置圆角 */
+  transition: all 0.3s ease; /* 添加过渡效果 */
+}
+
+nav a:hover {
+  color: #ffffff; /* 悬停时文字变白 */
+  background-color: #007acc; /* 悬停时添加背景色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+  transform: scale(1.1); /* 悬停时放大 */
+}
+
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.content h1 {
+  font-size: 48px;
+  margin: 0 0 20px 0;
+  color: #007acc;
+  line-height: 1.5;
+}
+
+.content h1 span {
+  display: block;
+}
+
+.content p {
+  line-height: 2;
+  font-size: 24px;
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  font-weight: bold;
+}
+
+.logo {
+  max-width: 700px;
+}
+
+.logo img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.team-intro-section {
+  width: 100%;
+  background-color: #f0f4f8; /* 设置浅灰色背景 */
+  padding: 50px 200px;
+  box-sizing: border-box;
+}
+
+.team-intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px 0;
+}
+
+.team-logo img {
+  width: 400px;
+  height: auto;
+  margin-right: 45px;
+}
+
+.team-description {
+  flex: 1;
+  margin-left: 20px; /* 调整与 Logo 的间距 */
+}
+
+.team-description h2 {
+  font-size: 36px;
+  color: #007acc;
+  margin-bottom: 20px;
+}
+
+.team-description p {
+  line-height: 2;
+  font-size: 22px;
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  font-weight: bold;
+}
+
+
+
+/* 获奖经历部分 */
+.honor-section {
+  width: 100%;
+  height: auto;
+  background-color: #f0f4f8;
+  padding: 50px 200px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.honor-section h2 {
+  font-size: 36px;
+  color: #007acc;
+  margin-bottom: 20px;
+}
+
+.year-group h3 {
+  font-size: 32px;
+  color: #555;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.honor-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.honor-list li {
+  font-size: 25px;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* 活跃成员部分 */
+.members-section {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  padding: 50px 200px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.members-section h2 {
+  font-size: 36px;
+  color: #007acc;
+  margin-bottom: 20px;
+}
+
+.members-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.member-card {
+  text-align: center;
+  width: calc(25% - 20px);
+  box-sizing: border-box;
+}
+
+.member-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.member-card img:hover {
+  transform: scale(1.1);
+}
+
+.member-card strong {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.member-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0 0;
+}
+
+.footer-separator-container {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.footer-separator {
+  width: 90%;
+  height: 2px;
+  margin: 20px auto;
+  background: linear-gradient(to right, #ffffff, #007acc, #ffffff);
+}
+
+.footer {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.wechat-container {
+  position: relative;
+}
+
+.wechat-icon {
+  width: 160px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.wechat-icon:hover {
+  transform: scale(1.2);
+}
+
+.wechat-qrcode {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.wechat-container:hover .wechat-qrcode {
+  display: block;
+}
+
+.wechat-qrcode img {
+  width: 150px;
+  height: 150px;
+}
+
+.footer-text {
+  font-size: 16px;
+  color: #333;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    margin: 0 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .main-section {
+    flex-direction: column;
+    padding: 30px 20px;
+    height: auto;
+    margin-top: 80px;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+
+  .team-logo img {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .team-description {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .member-card {
+    width: calc(50% - 10px);
+  }
+
+  .honor-section,
+  .members-section {
+    padding: 30px 10px;
+  }
+
+  .team-intro-section {
+    padding: 20px 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .team-description p,
+  .honor-list li {
+    word-wrap: break-word;
+    font-size: 16px;
+  }
+}
+
