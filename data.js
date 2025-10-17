@@ -49,6 +49,7 @@ window.membersData = [
   { id: 5, name: "oyoung", avatar: "img/avatar/oyoung.jpg", blog: "", description: "flag{there is no flag}", year: 2024 },
   { id: 5, name: "GG_Boss", avatar: "img/avatar/GG_Boss.jpg", blog: "", description: "敲密码的", year: 2024 },
   { id: 5, name: "cccccy", avatar: "img/avatar/cccccy.jpg", blog: "", description: "今天给大家做一个wink吧", year: 2024 },
-  { id: 5, name: "para", avatar: "img/avatar/para.jpg", blog: "", description: "三分钟热度就有三分钟的收获", year: 2024 }
+  { id: 5, name: "para", avatar: "img/avatar/para.jpg", blog: "", description: "三分钟热度就有三分钟的收获", year: 2024 },
+  { id: 5, name: "Gawer", avatar: "img/avatar/Gawer.jpg", blog: "", description: "葡萄美酒夜光杯，flag一杯我一杯", year: 2024 }
 ];
     
